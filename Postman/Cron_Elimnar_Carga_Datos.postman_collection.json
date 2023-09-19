@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "589769c4-128b-445e-bf84-680981c27bdd",
+		"name": "Cron_Elimnar_Carga_Datos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25298489",
+		"_collection_link": "https://lively-meadow-444842.postman.co/workspace/My-Workspace~4fc0eaff-9165-498c-8b8e-2741887df231/collection/25298489-589769c4-128b-445e-bf84-680981c27bdd?action=share&source=collection_link&creator=25298489"
+	},
+	"item": [
+		{
+			"name": "Inserta Comercio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_comercio\": 123456789,\r\n    \"nombre\": \"Sombrero\",\r\n    \"mcc\": 5812,\r\n    \"consorcio\": false,\r\n    \"activo\": true,\r\n    \"categoria_id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Comercio/Insertar_Comercio",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Comercio",
+						"Insertar_Comercio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"ecom\": false,\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 97003,\r\n        \"telefono\": \"2125864853\",\r\n        \"longitud\": -73.98715,\r\n        \"latitud\": 40.761097,\r\n        \"activo\": true,\r\n        \"comercio_id\": 123456789\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Sucursal/Insertar_Sucursal",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Sucursal",
+						"Insertar_Sucursal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Oferta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"tipo\": 1,\r\n        \"descripcion\": \"This upscale dining establishment has served the New York theater and business communities since 1985. Rosa's Place offers daily three-course lunch and dinner specials. For a perfect dining experience in warm weather, choose to sit outside while sipping on one of the restaurant's many refreshing margaritas. Or sit inside and drink in the vibrant dÃ©cor, with its bright yellow and orange walls and colorful prints with splashes of fuschia and blue. The large, moderately priced menu showcases Mexican cuisine, with starters of black bean soup, guacamole with chips, ceviche and empanadas con carne. The entrees include salads, traditional dishes such as burritos and fajitas, and a number of \\\"Rosa's Specialties,\\\" such as crispy red snapper burritos, Trout Vita (broiled with butter, pine nuts and coriander) and a roasted half-chicken. The drink list is extensive and includes margaritas by the glass or the pitcher, several beers (domestic and imported), several wines and several liquors.\",\r\n        \"vigenciaInicio\": \"2023-07-20\",\r\n        \"vigenciaFin\": null,\r\n        \"terminosCondiciones\": null,\r\n        \"comision\": 0.02,\r\n        \"compraMinima\": 0.0,\r\n        \"porcentajeReembolso\": 0.05,\r\n        \"montoReembolso\": null,\r\n        \"topeEvento\": 0.0,\r\n        \"topeMensual\": null,\r\n        \"topeTotal\": null,\r\n        \"eventosMensuales\": null,\r\n        \"eventosTotales\": null,\r\n        \"diasSemana\": 127,\r\n        \"diasMes\": null,\r\n        \"plazosValidos\": null,\r\n        \"plazosBonificados\": null,\r\n        \"mesesUltimaCompra\": null,\r\n        \"reiniciarEventos\": null,\r\n        \"status\": 2,\r\n        \"afiliacionWL\": false,\r\n        \"productoWL\": false,\r\n        \"segmentoWL\": false,\r\n        \"reqAct\": false,\r\n        \"comercio_id\": 123456789,\r\n        \"programa_id\": 91\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Oferta/Insertar_Oferta",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Oferta",
+						"Insertar_Oferta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Razon Social",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfU1VQRVIiLCJleHAiOjE2OTMyMDczMTV9.7T5CPupevED_WpfnoBbjUJBThzyYXh1cl8q25E-iGZ81LEIEPaCIfByBrvQQk8-PQl7wbi5cmagkuZtfqTI5aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"rfc\": \"TLU080610C82\",\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 75036,\r\n        \"activo\": true,\r\n        \"comercio_id\": 123456789\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/RazonSocial/Inserta_RzSocial",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"RazonSocial",
+						"Inserta_RzSocial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Afiliacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1027359,\r\n        \"numero\": 1027359,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 123456789,\r\n        \"sucursal_id\": 123456789\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Afiliacion/Insertar_Afiliacion",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Afiliacion",
+						"Insertar_Afiliacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Transaccion_visa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10000004,\r\n        \"buc\": 90000,\r\n        \"fecha\": \"2021-03-04\",\r\n        \"tipo\": 1,\r\n        \"monto\": 1500.0,\r\n        \"ultimosDigitos\": 343,\r\n        \"weekday\": 4,\r\n        \"status\": 1,\r\n        \"afiliacion_id\": 1027359,\r\n        \"banco_id\": 9,\r\n        \"tarjetahabiente_id\": 1000000677785\r\n\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Transaccion_visa/Inserta_TrVisa",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Transaccion_visa",
+						"Inserta_TrVisa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/Apps/Eliminar/1027359/123456789",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Apps",
+						"Eliminar",
+						"1027359",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proceso_Final_Inserccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comercio\":{\r\n    \"id_comercio\": 123456789,\r\n    \"nombre\": \"Sombrero\",\r\n    \"mcc\": 5812,\r\n    \"consorcio\": false,\r\n    \"activo\": true,\r\n    \"categoria_id\": 1\r\n    },\r\n    \"sucursales\":{\r\n        \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"ecom\": false,\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 97003,\r\n        \"telefono\": \"2125864853\",\r\n        \"longitud\": -73.98715,\r\n        \"latitud\": 40.761097,\r\n        \"activo\": true,\r\n        \"comercio_id\": 123456789\r\n    },\r\n    \"oferta\":{\r\n         \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"tipo\": 1,\r\n        \"descripcion\": \"This upscale dining establishment has served the New York theater and business communities since 1985. Rosa's Place offers daily three-course lunch and dinner specials. For a perfect dining experience in warm weather, choose to sit outside while sipping on one of the restaurant's many refreshing margaritas. Or sit inside and drink in the vibrant dÃ©cor, with its bright yellow and orange walls and colorful prints with splashes of fuschia and blue. The large, moderately priced menu showcases Mexican cuisine, with starters of black bean soup, guacamole with chips, ceviche and empanadas con carne. The entrees include salads, traditional dishes such as burritos and fajitas, and a number of \\\"Rosa's Specialties,\\\" such as crispy red snapper burritos, Trout Vita (broiled with butter, pine nuts and coriander) and a roasted half-chicken. The drink list is extensive and includes margaritas by the glass or the pitcher, several beers (domestic and imported), several wines and several liquors.\",\r\n        \"vigenciaInicio\": \"2023-07-20\",\r\n        \"vigenciaFin\": null,\r\n        \"terminosCondiciones\": null,\r\n        \"comision\": 0.02,\r\n        \"compraMinima\": 0.0,\r\n        \"porcentajeReembolso\": 0.05,\r\n        \"montoReembolso\": null,\r\n        \"topeEvento\": 0.0,\r\n        \"topeMensual\": null,\r\n        \"topeTotal\": null,\r\n        \"eventosMensuales\": null,\r\n        \"eventosTotales\": null,\r\n        \"diasSemana\": 127,\r\n        \"diasMes\": null,\r\n        \"plazosValidos\": null,\r\n        \"plazosBonificados\": null,\r\n        \"mesesUltimaCompra\": null,\r\n        \"reiniciarEventos\": null,\r\n        \"status\": 2,\r\n        \"afiliacionWL\": false,\r\n        \"productoWL\": false,\r\n        \"segmentoWL\": false,\r\n        \"reqAct\": false,\r\n        \"comercio_id\": 123456789,\r\n        \"programa_id\": 91\r\n    },\r\n    \"razonSocial\":{\r\n         \"id\": 123456789,\r\n        \"nombre\": \"Sombrero\",\r\n        \"rfc\": \"TLU080610C82\",\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 75036,\r\n        \"activo\": true,\r\n        \"comercio_id\": 123456789\r\n    },\r\n    \"afiliacion\":{\r\n         \"id\": 1027359,\r\n        \"numero\": 1027359,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 123456789,\r\n        \"sucursal_id\": 123456789\r\n\r\n    }\r\n    }\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Apps/prueba",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Apps",
+						"prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cron_Carga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comercios\":[\r\n        {\r\n    \"id_comercio\": 110,\r\n    \"nombre\": \"Sombrero\",\r\n    \"mcc\": 5812,\r\n    \"consorcio\": false,\r\n    \"activo\": true,\r\n    \"categoria_id\": 1\r\n    },{\r\n    \"id_comercio\": 112,\r\n    \"nombre\": \"CK Diggs\",\r\n    \"mcc\": 5812,\r\n    \"consorcio\": false,\r\n    \"activo\": true,\r\n    \"categoria_id\": 1\r\n    },{\r\n    \"id_comercio\": 113,\r\n    \"nombre\": \"Blue Mermaid Island Grill\",\r\n    \"mcc\": 5812,\r\n    \"consorcio\": false,\r\n    \"activo\": true,\r\n    \"categoria_id\": 1\r\n    }\r\n    ], \"razon_Social\":[{\r\n         \"id\": 110,\r\n        \"nombre\": \"Sombrero\",\r\n        \"rfc\": \"TLU080610C82\",\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 75036,\r\n        \"activo\": true,\r\n        \"comercio_id\": 110\r\n    },{\r\n         \"id\": 112,\r\n        \"nombre\": \"CK Diggs\",\r\n        \"rfc\": \"TLU080610C82\",\r\n        \"direccion\": \"2010 Auburn Rd\",\r\n        \"colonia\": \"2010 Auburn Rd\",\r\n        \"cp\": 75036,\r\n        \"activo\": true,\r\n        \"comercio_id\": 112\r\n    },{\r\n        \"id\": 113,\r\n        \"nombre\": \"Blue Mermaid Island Grill\",\r\n        \"rfc\": \"TLU080610C82\",\r\n        \"direccion\": \"10 Shapleigh Rd\",\r\n        \"colonia\": \"10 Shapleigh Rd\",\r\n        \"cp\": 75036,\r\n        \"activo\": true,\r\n        \"comercio_id\": 113\r\n    }  \r\n    ],\r\n    \"sucursal\":[\r\n    {\r\n        \"id\": 110,\r\n        \"nombre\": \"Sombrero\",\r\n        \"ecom\": false,\r\n        \"direccion\": \"303 W 48th St\",\r\n        \"colonia\": \"303 W 48th St\",\r\n        \"cp\": 97003,\r\n        \"telefono\": \"2125864853\",\r\n        \"longitud\": -73.98715,\r\n        \"latitud\": 40.761097,\r\n        \"activo\": true,\r\n        \"comercio_id\": 110\r\n    },{\r\n         \"id\": 112,\r\n        \"nombre\": \"CK Diggs\",\r\n        \"ecom\": false,\r\n        \"direccion\": \"2010 Auburn Rd\",\r\n        \"colonia\": \"2010 Auburn Rd\",\r\n        \"cp\": 97003,\r\n        \"telefono\": \"2488536600\",\r\n        \"longitud\": -83.170167,\r\n        \"latitud\":42.635023,\r\n        \"activo\": true,\r\n        \"comercio_id\": 112\r\n    },{\r\n        \"id\": 113,\r\n        \"nombre\": \"Blue Mermaid Island Grill\",\r\n        \"ecom\": false,\r\n        \"direccion\": \"10 Shapleigh Rd\",\r\n        \"colonia\": \"10 Shapleigh Rd\",\r\n        \"cp\": 97003,\r\n        \"telefono\": \"6034272583\",\r\n        \"longitud\": -70.736822,\r\n        \"latitud\":43.089948,\r\n        \"activo\": true,\r\n        \"comercio_id\": 113 \r\n    }],\r\n    \"afiliaciones\":[{\r\n         \"id\": 524563840,\r\n        \"numero\": 524563840,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 110,\r\n        \"sucursal_id\": 110\r\n\r\n    },{\r\n          \"id\": 249192758,\r\n        \"numero\": 249192758,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 112,\r\n        \"sucursal_id\": 112\r\n    },\r\n    {\r\n          \"id\": 824950112,\r\n        \"numero\": 824950112,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 113,\r\n        \"sucursal_id\": 113\r\n    },\r\n    {\r\n          \"id\": 848425519,\r\n        \"numero\": 848425519,\r\n        \"activo\": true,\r\n        \"razon_social_id\": 113,\r\n        \"sucursal_id\": 113\r\n    }],\r\n    \"ofertas\":[{\r\n         \"id\": 110,\r\n        \"nombre\": \"Sombrero\",\r\n        \"tipo\": 1,\r\n        \"descripcion\": \"This upscale dining establishment has served the New York theater and business communities since 1985. Rosa's Place offers daily three-course lunch and dinner specials. For a perfect dining experience in warm weather, choose to sit outside while sipping on one of the restaurant's many refreshing margaritas. Or sit inside and drink in the vibrant dÃ©cor, with its bright yellow and orange walls and colorful prints with splashes of fuschia and blue. The large, moderately priced menu showcases Mexican cuisine, with starters of black bean soup, guacamole with chips, ceviche and empanadas con carne. The entrees include salads, traditional dishes such as burritos and fajitas, and a number of \\\"Rosa's Specialties,\\\" such as crispy red snapper burritos, Trout Vita (broiled with butter, pine nuts and coriander) and a roasted half-chicken. The drink list is extensive and includes margaritas by the glass or the pitcher, several beers (domestic and imported), several wines and several liquors.\",\r\n        \"vigenciaInicio\": null,\r\n        \"vigenciaFin\": null,\r\n        \"terminosCondiciones\": null,\r\n        \"comision\": 0.02,\r\n        \"compraMinima\": 0.0,\r\n        \"porcentajeReembolso\": 0.05,\r\n        \"montoReembolso\": null,\r\n        \"topeEvento\": 0.0,\r\n        \"topeMensual\": null,\r\n        \"topeTotal\": null,\r\n        \"eventosMensuales\": null,\r\n        \"eventosTotales\": null,\r\n        \"diasSemana\": 127,\r\n        \"diasMes\": null,\r\n        \"plazosValidos\": null,\r\n        \"plazosBonificados\": null,\r\n        \"mesesUltimaCompra\": null,\r\n        \"reiniciarEventos\": null,\r\n        \"status\": 2,\r\n        \"afiliacionWL\": false,\r\n        \"productoWL\": false,\r\n        \"segmentoWL\": false,\r\n        \"reqAct\": false,\r\n        \"comercio_id\": 110,\r\n        \"programa_id\": 91\r\n    },{\r\n          \"id\": 112,\r\n        \"nombre\": \"CK Diggs\",\r\n        \"tipo\": 1,\r\n        \"descripcion\": \"Put CK Diggs on your list of new favorite restaurants, because this family-owned and operated spot has something for everyone to love. This is a classic American bistro with a summer patio, plenty of comfortable seating, friendly service, and lots of great food and refreshing drinks to try. Perfect for family dinners, spending time with someone special, or meeting co-workers for lunch, you can enjoy a quick meal or a leisurely feast here. Check out the menu. On it are hand-crafted pastas, seafood, pizzas, sandwiches, burgers, salads, and daily specials to try. Munch on the Cajun onion petals or fully-loaded nachos, then dig in to steaks, baby back ribs, crispy Thai shrimp, and much more. Wash it all down with a drink from the bar. Boasting one of the largest beer selections in the area, you'll find 41 taps, and more than 120 beer choices in all offered here. Domestics, imports, crafts, and local brews are all featured. There's plenty if you're more of a wine sipper or cocktail enthusiast. CK Diggs is also a great choice for catching the big game. With lots of TV screens and all the best games, you can go on game day or any day! But wait, there's more! There are specials just about every day of the week, including Monday's burger and beer deals, Thursday's sliders and fries, and Saturday's lunch specials. There are beer of the month and other beer specials, too. With something for everyone, head to CK Diggs today!\",\r\n        \"vigenciaInicio\": null,\r\n        \"vigenciaFin\": null,\r\n        \"terminosCondiciones\": null,\r\n        \"comision\": 0.02,\r\n        \"compraMinima\": 0.0,\r\n        \"porcentajeReembolso\": 0.05,\r\n        \"montoReembolso\": null,\r\n        \"topeEvento\": 0.0,\r\n        \"topeMensual\": null,\r\n        \"topeTotal\": null,\r\n        \"eventosMensuales\": null,\r\n        \"eventosTotales\": null,\r\n        \"diasSemana\": 127,\r\n        \"diasMes\": null,\r\n        \"plazosValidos\": null,\r\n        \"plazosBonificados\": null,\r\n        \"mesesUltimaCompra\": null,\r\n        \"reiniciarEventos\": null,\r\n        \"status\": 2,\r\n        \"afiliacionWL\": false,\r\n        \"productoWL\": false,\r\n        \"segmentoWL\": false,\r\n        \"reqAct\": false,\r\n        \"comercio_id\": 112,\r\n        \"programa_id\": 91\r\n\r\n    },{\r\n          \"id\": 113,\r\n        \"nombre\": \"Blue Mermaid Island Grill\",\r\n        \"tipo\": 1,\r\n        \"descripcion\": \"The flavors of the Caribbean have been delighting diners at Blue Mermaid Island Grill since 1994 in Portsmouth, but now it is located in Kittery, Main, and treating locals and visitors there to a great time out. Family-friendly, casual and always delicious, this is the place to go for lunch, dinner or Sunday brunch. There's always plenty of deliciousness to tempt you, but favorites include the Jamaican jerk chicken, guava-braised short ribs, New World paella, and the island shrimp pad Thai. There are soups, salads, sandwiches, grilled seafood, vegetarian and gluten-free dishes, and plates both large and small, ensuring plenty of variety for everyone. And, to go with your meal, select from the eight craft brews on tap, or ask about signature cocktails. There's nothing like a tropical cocktail to go with your island-inspired meal! Get comfy any time at the bar, in the lounge or in the spacious dining room. There's more to love about Blue Mermaid, including live blues or jazz on Thursdays and more live music on Fridays and Saturdays, along with kids-eat-free Sunday evenings; trivia on Mondays; Open Mic Night on Wednesdays; and Happy Hour specials that are offered from 3-6 p.m. Sundays through Fridays. There's always something delicious AND fun happening at Blue Mermaid -- check out this iconic restaurant and bar today!\",\r\n        \"vigenciaInicio\": null,\r\n        \"vigenciaFin\": null,\r\n        \"terminosCondiciones\": null,\r\n        \"comision\": 0.02,\r\n        \"compraMinima\": 0.0,\r\n        \"porcentajeReembolso\": 0.05,\r\n        \"montoReembolso\": null,\r\n        \"topeEvento\": 0.0,\r\n        \"topeMensual\": null,\r\n        \"topeTotal\": null,\r\n        \"eventosMensuales\": null,\r\n        \"eventosTotales\": null,\r\n        \"diasSemana\": 127,\r\n        \"diasMes\": null,\r\n        \"plazosValidos\": null,\r\n        \"plazosBonificados\": null,\r\n        \"mesesUltimaCompra\": null,\r\n        \"reiniciarEventos\": null,\r\n        \"status\": 2,\r\n        \"afiliacionWL\": false,\r\n        \"productoWL\": false,\r\n        \"segmentoWL\": false,\r\n        \"reqAct\": false,\r\n        \"comercio_id\": 113,\r\n        \"programa_id\": 91\r\n    }\r\n    ]\r\n    }\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/CronCargaDatoUn/Apps/Inserta_Carga",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CronCargaDatoUn",
+						"Apps",
+						"Inserta_Carga"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
